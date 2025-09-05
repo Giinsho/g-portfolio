@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="21.134 140.173 422.703 141.973" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="264.611" y1="211.875" x2="264.611" y2="284.011" id="gradient-6" gradientTransform="matrix(1, 0, 0, 1, -117.280499, -16.804042)">
+      <stop offset="0" style="stop-color: rgb(50, 18, 137);"/>
+      <stop offset="1" style="stop-color: rgba(143, 139, 7, 1)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="152.38" y1="211.685" x2="152.38" y2="283.821" id="gradient-3" gradientTransform="matrix(1.000004, 0, 0, 1.000004, -5.050572, -16.615875)">
+      <stop offset="0" style=""/>
+      <stop offset="1" style="stop-color: rgb(2, 2, 0);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="189.414" y1="211.522" x2="189.414" y2="283.658" id="gradient-4" gradientTransform="matrix(1, 0, 0, 1, -117.28052, -16.804039)">
+      <stop offset="0" style="stop-color: rgb(85, 18, 137);"/>
+      <stop offset="1" style="stop-color: rgb(210, 184, 104);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="152.38" y1="211.685" x2="152.38" y2="283.821" id="gradient-1" gradientTransform="matrix(1.000001, 0, 0, 1.000001, -80.245766, -16.966992)">
+      <stop offset="0" style=""/>
+      <stop offset="1" style="stop-color: rgb(2, 2, 0);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="227.012" y1="172.864" x2="227.012" y2="245" id="gradient-0" gradientTransform="matrix(1, 0, 0, 1, -117.281114, -16.804613)">
+      <stop offset="0" style="stop-color: rgb(70, 18, 137);"/>
+      <stop offset="1" style="stop-color: rgb(156, 152, 45);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="152.38" y1="211.685" x2="152.38" y2="283.821" id="gradient-2" gradientTransform="matrix(1.000002, 0.000001, -0.000001, 1.000002, -42.649187, -55.626555)">
+      <stop offset="0" style=""/>
+      <stop offset="1" style="stop-color: rgb(2, 2, 0);"/>
+    </linearGradient>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="291.801" cy="258.979" r="129.509" id="gradient-8" gradientTransform="matrix(0.047533, 0.99887, -2.204314, 0.104895, 727.76499, -91.005883)">
+      <stop offset="0" style=""/>
+      <stop offset="1" style="stop-color: rgb(62, 5, 62);"/>
+    </radialGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="314.328" y1="140.173" x2="314.328" y2="265.586" id="gradient-5">
+      <stop offset="0" style="stop-color: rgb(255, 225, 0);"/>
+      <stop offset="1" style="stop-color: rgb(111, 0, 222);"/>
+    </linearGradient>
+    <style bx:fonts="Besley">@import url(https://fonts.googleapis.com/css2?family=Besley%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900&amp;display=swap);</style>
+  </defs>
+  <path d="M 147.331 195.071 C 140.198 195.071 131.727 212.913 125.795 216.877 C 119.864 220.84 116.739 210.746 114.009 217.336 C 111.279 223.927 110.565 231.179 111.957 238.175 C 113.348 245.172 116.783 251.599 121.828 256.643 C 126.872 261.687 133.298 265.122 140.295 266.514 C 147.291 267.905 154.543 267.191 161.134 264.461 C 167.725 261.731 173.358 257.108 177.321 251.177 C 181.284 245.246 183.399 238.272 183.399 231.139 L 165.365 231.139 C 165.365 234.706 164.308 238.192 162.326 241.158 C 160.344 244.124 157.528 246.435 154.233 247.8 C 150.937 249.165 147.311 249.522 143.813 248.826 C 140.315 248.13 137.102 246.413 134.58 243.891 C 132.057 241.369 130.34 238.155 129.644 234.657 C 128.948 231.159 129.305 227.533 130.67 224.238 C 132.035 220.942 134.347 218.126 137.312 216.144 C 140.278 214.163 143.765 213.105 147.331 213.105 L 147.331 195.071 Z" style="fill-opacity: 0.66; stroke-miterlimit: 10; stroke: url(#gradient-3); stroke-width: 4px; fill: url(#gradient-6);" transform="matrix(0.707107, -0.707107, 0.707107, 0.707107, -120.287476, 171.877975)"/>
+  <path d="M 72.134 194.718 C 65.001 194.718 58.028 196.833 52.096 200.797 C 46.165 204.76 41.542 210.393 38.812 216.983 C 36.082 223.574 35.368 230.826 36.76 237.822 C 38.151 244.819 41.586 251.246 46.631 256.29 C 51.675 261.334 58.101 264.769 65.098 266.161 C 72.094 267.552 79.346 266.838 85.937 264.108 C 92.528 261.378 83.75 260.497 86.817 253.699 C 89.884 246.901 108.181 237.899 108.202 230.786 L 90.168 230.786 C 90.168 234.353 89.111 237.839 87.129 240.805 C 85.147 243.771 82.331 246.082 79.036 247.447 C 75.74 248.812 72.114 249.169 68.616 248.473 C 65.118 247.777 61.905 246.06 59.383 243.538 C 56.86 241.016 55.143 237.802 54.447 234.304 C 53.751 230.806 54.108 227.18 55.473 223.885 C 56.838 220.589 59.15 217.773 62.115 215.791 C 65.081 213.81 68.568 212.752 72.134 212.752 L 72.134 194.718 Z" style="fill-opacity: 0.66; stroke-miterlimit: 10; stroke-width: 4px; stroke: url(#gradient-1); fill: url(#gradient-4);" transform="matrix(0.718705, -0.695315, 0.695315, 0.718705, -140.177841, 115.074989)"/>
+  <path d="M 109.731 156.06 C 102.598 156.06 95.625 158.175 89.693 162.139 C 83.762 166.102 79.139 171.735 76.409 178.325 C 73.679 184.916 72.965 192.168 74.357 199.164 C 75.748 206.161 79.183 212.588 84.228 217.632 C 89.272 222.676 95.698 226.111 102.695 227.503 C 109.691 228.894 116.943 228.18 123.534 225.45 C 130.125 222.72 135.758 218.097 139.721 212.166 C 143.684 206.235 145.799 199.261 145.799 192.128 L 127.765 192.128 C 127.765 195.695 126.708 199.181 124.726 202.147 C 122.744 205.113 119.928 207.424 116.633 208.789 C 113.337 210.154 109.711 210.511 106.213 209.815 C 102.715 209.119 99.502 207.402 96.98 204.88 C 94.457 202.358 92.74 199.144 92.044 195.646 C 91.348 192.148 91.705 188.522 93.07 185.227 C 94.435 181.931 96.747 179.115 99.712 177.133 C 102.678 175.152 106.165 174.094 109.731 174.094 L 109.731 156.06 Z" style="fill-opacity: 0.66; stroke-miterlimit: 10; stroke-width: 4px; stroke: url(#gradient-2); fill: url(#gradient-0);" transform="matrix(-0.707107, 0.707107, -0.707107, -0.707107, 323.177979, 250.39093)"/>
+  <text style="fill: url(#gradient-8); fill-opacity: 0.93; font-family: Besley; font-size: 75px; font-weight: 700; stroke: url(#gradient-5); stroke-linecap: round; white-space: pre;" x="184.819" y="233.82">G-Site</text>
+</svg>
