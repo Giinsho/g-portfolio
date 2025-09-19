@@ -1,4 +1,3 @@
-
 # Portfolio G Site
 
 This is a personal portfolio website built using **React** and **Vite**. It showcases projects, skills, and experiences, and includes features like GitHub project integration, downloadable CVs, and responsive design.
@@ -71,17 +70,20 @@ Portfolio_G_Site_2025/
 ### Installation
 
 1. Clone the repository:
+
    ```bash
-   git clone https://github.com/Giinsho/portfolio_G_site.git
+   git clone https://github.com/Giinsho/g-portfolio.git
    cd portfolio_G_site
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Start the development server:
+
    ```bash
    npm run dev
    ```
@@ -105,6 +107,7 @@ Portfolio_G_Site_2025/
 This project is configured to deploy to **GitHub Pages**. To deploy:
 
 1. Build the project:
+
    ```bash
    npm run build
    ```
@@ -115,11 +118,14 @@ This project is configured to deploy to **GitHub Pages**. To deploy:
    ```
 
 The website will be available at:  
-[https://Giinsho.github.io/portfolio_G_site/](https://Giinsho.github.io/Portfolio_G_site/)
+[https://Giinsho.github.io/portfolio_G_site/](https://Giinsho.github.io/g-portfolio/)
 
 ---
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+```
+
 ```
