@@ -11,6 +11,7 @@ import {
   Experience,
 } from "./components";
 
+import Demo from "./components/Spline/demo";
 const MaintenanceMode = false;
 const App = () => {
   if (MaintenanceMode) {
@@ -18,12 +19,11 @@ const App = () => {
   }
   return (
     <div className={`bg-primary w-full overflow-hidden`}>
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+      <div className={`bg-primary ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <Navbar />
+          <Demo />
         </div>
       </div>
-
       <div className={`bg-primary ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           <AboutMe />
