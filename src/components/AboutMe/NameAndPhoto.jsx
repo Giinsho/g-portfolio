@@ -1,21 +1,54 @@
+import React, { useEffect, useState } from "react";
 import styles from "../../style";
+
 const NameAndPhoto = ({ name, image }) => {
+  // Classy subtle background glow with matching box-shadow
+  const glowKeyframes = `
+    @keyframes bg-glow {
+      0%, 100% {
+        background-color: rgba(255, 255, 255, 0.01);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.02);
+      }
+      50% {
+        background-color: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+      }
+    }
+  `;
+
+  const [injected, setInjected] = useState(false);
+  useEffect(() => {
+    if (!injected) {
+      const styleSheet = document.createElement("style");
+      styleSheet.innerHTML = glowKeyframes;
+      document.head.appendChild(styleSheet);
+      setInjected(true);
+    }
+  }, [injected]);
+
   return (
-    <div className=" w-full">
+    <div className="w-full">
       <div className="flex-1 flex justify-center items-center relative">
-        <img
-          src={image}
-          alt="my-picture"
-          className=" w-[40%] h-[40%] relative z-[5] rounded-full"
-        />
+        {/* Circular wrapper with subtle animated background and shadow */}
+        <div
+          className="relative w-[40%] h-[40%] rounded-full flex items-center justify-center"
+          style={{
+            animation: "bg-glow 5s ease-in-out infinite",
+          }}
+        >
+          <img
+            src={image}
+            alt="my-picture"
+            className="w-full h-full rounded-full object-cover"
+          />
+        </div>
+
         <h1
-          className="  font-poppins font-semibold ss:text-[72px] text-[52px] text-white 
+          className="font-poppins font-semibold ss:text-[72px] text-[52px] text-white 
           ss:leading-[100px] leading-[75px] md:5"
         >
-          <span className="text-gradient">{name}</span>{" "}
-          
+          <span className="text-gradient">{name}</span>
         </h1>
-        
 
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
         <div className="absolute z-[1] w-[80%] h-[80%] bottom-40 white__gradient rounded-full" />

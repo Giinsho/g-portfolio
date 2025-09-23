@@ -75,36 +75,51 @@ import MatlabIcon from "../assets/icons/matlab.svg?react";
 
 import CV_pl from "../assets/CV-version-pl.pdf";
 import CV_en from "../assets/CV-version-en.pdf";
+import {
+  UserCheck,
+  User,
+  GraduationCap,
+  Briefcase,
+  Code,
+  Box,
+  MoreHorizontal,
+} from "lucide-react";
 
 export const navLinks = [
   {
-    id: "aboutme",
-    title: "Aboute Me",
+    id: "jobsearch",
+    title: "Looking for Job",
+    icon: UserCheck, // represents a person actively seeking a job
   },
-
+  {
+    id: "aboutme",
+    title: "About Me",
+    icon: User, // represents a person
+  },
   {
     id: "education",
     title: "Education",
+    icon: GraduationCap, // graduation cap icon
   },
   {
     id: "experience",
     title: "Experience",
+    icon: Briefcase, // work experience
+  },
+  {
+    id: "projects",
+    title: "Projects",
+    icon: Box, // project or portfolio box
   },
   {
     id: "technologies",
     title: "Technologies",
-  },
-  // {
-  //   id: "stats",
-  //   title: "Stats",
-  // },
-  {
-    id: "projects",
-    title: "Projects",
+    icon: Code, // code symbol for tech stack
   },
   {
     id: "footer",
     title: "More",
+    icon: MoreHorizontal, // three dots for more/options
   },
 ];
 

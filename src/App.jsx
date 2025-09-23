@@ -10,20 +10,34 @@ import {
   Maintenance,
   Experience,
 } from "./components";
+import Spline from "./components/Spline/Spline";
+import JobSign from "./components/JobSign";
 
-import Demo from "./components/Spline/demo";
 const MaintenanceMode = false;
+
 const App = () => {
   if (MaintenanceMode) {
     return <Maintenance />;
   }
+
   return (
-    <div className={`bg-primary w-full overflow-hidden`}>
+    <div className="bg-primary w-full overflow-hidden relative">
+      {/* background spline */}
+      <Spline />
+
+      {/* foreground content */}
       <div className={`bg-primary ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <Demo />
+          <Navbar />
         </div>
       </div>
+
+      <div className={`bg-primary ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <JobSign />
+        </div>
+      </div>
+
       <div className={`bg-primary ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           <AboutMe />

@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@splinetool/react-spline": "^4.1.0",
-    "@splinetool/runtime": "^1.10.57",
+    "@splinetool/runtime": "^1.10.64",
     "@tailwindcss/vite": "^4.0.13",
     "@vitejs/plugin-react": "^4.3.4",
     "amqplib": "^0.10.3",

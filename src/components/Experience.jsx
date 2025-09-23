@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "../style";
 import { check, robot } from "../assets";
-
+import Typing from "./Typing";
+import { SplineScene } from "./Spline/SplineScene.js";
 const belchor = [
   "Implementation of scripts in C#",
   "Working with the Unity game engine",
@@ -14,6 +15,7 @@ const belchor = [
 ];
 
 const master = [
+  "Research on AI-based control systems for autonomous vehicles, including reinforcement learning and computer vision techniques.",
   "Implementing and testing reinforcement learning algorithms (PPO, SAC) in autonomous driving simulations",
   "Using neural networks (FFN, ResNet50, Nvidia PilotNet) for analyzing camera images",
   "Integrating YOLO and vision algorithms for obstacle detection",
@@ -31,7 +33,14 @@ const Experience = () => {
         <div className="flex flex-row justify-between items-center w-full">
           <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px]">
             Experience <br className="sm:block hidden" />{" "}
-            <span className="text-gradient">Projects</span>
+            <Typing
+              texts={["Projects"]}
+              typingSpeed={220}
+              deletingSpeed={40}
+              pauseBetween={5000}
+              loop={true}
+              className="text-gradient"
+            />
           </h1>
         </div>
 
@@ -67,13 +76,6 @@ const Experience = () => {
             Master's Thesis: Application of AI in Autonomous Vehicle Control
             Systems
           </h2>
-          <div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
-            <img src={check} alt="check" className="w-[32px] h-[32px]" />
-            <p className={`${styles.paragraph} ml-2`}>
-              Research on AI-based control systems for autonomous vehicles,
-              including reinforcement learning and computer vision techniques.
-            </p>
-          </div>
 
           <div className="flex flex-col gap-2">
             {master.map((task, index) => (
@@ -94,11 +96,14 @@ const Experience = () => {
       </div>
 
       <div className="flex-1 flex justify-center items-center relative md:mt-0">
-        <img
-          src={robot}
-          alt="robot"
-          className="h-auto w-full object-contain relative z-10 rounded-[20px]  opacity-80 "
-        />
+        <div className="relative">
+          <img
+            src={robot}
+            alt="robot"
+            className="h-auto w-full object-contain relative z-10 rounded-[20px]  opacity-80 "
+          />
+        </div>
+
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient blur"></div>
         <div className="absolute z-[1] w-[80%] h-[80%] bottom-40 white__gradient rounded-full"></div>
         <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue__gradient"></div>

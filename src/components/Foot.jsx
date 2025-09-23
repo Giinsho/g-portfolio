@@ -2,7 +2,7 @@ import React from "react";
 import { logo } from "../assets";
 import { footerLinks, socialMedia } from "../constants";
 import styles from "../style";
-
+import Typing from "./Typing";
 const Foot = () => {
   const handleDownload = (file, name) => {
     const link = document.createElement("a");
@@ -14,17 +14,37 @@ const Foot = () => {
   };
 
   return (
-    <section id="footer" className={`${styles.flexCenter} ${styles.paddingY} flex-col text-dim-white`}>
+    <section
+      id="footer"
+      className={`${styles.flexCenter} ${styles.paddingY} flex-col text-dim-white`}
+    >
       <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
         <div className="flex-1 flex flex-col justify-start mr-10">
-          <img src={logo} alt="gsite" className="w-[266px] h-[72px] object-contain" />
-          <p className={`${styles.paragraph} mt-4 max-w-[310px]`}>Empowering ideas through technology.</p>
+          <img
+            src={logo}
+            alt="gsite"
+            className="w-[266px] h-[72px] object-contain"
+          />
+
+          <Typing
+            texts={["Empowering ideas through technology."]}
+            typingSpeed={40}
+            deletingSpeed={40}
+            pauseBetween={5000}
+            loop={true}
+            className={`${styles.paragraph} mt-4 max-w-[310px]`}
+          />
         </div>
 
         <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">
           {footerLinks.map((footerLink, index) => (
-            <div key={`footerLink_${index}`} className="flex flex-col ss:my-0 my-4 min-w-[150px]">
-              <h1 className="font-poppins font-medium text-[22px] leading-[27px] text-white mb-4 ml-2">{footerLink.title}</h1>
+            <div
+              key={`footerLink_${index}`}
+              className="flex flex-col ss:my-0 my-4 min-w-[150px]"
+            >
+              <h1 className="font-poppins font-medium text-[22px] leading-[27px] text-white mb-4 ml-2">
+                {footerLink.title}
+              </h1>
               <ul className="list-none flex flex-col gap-4">
                 {footerLink.links.map((link) => (
                   <li
@@ -33,14 +53,24 @@ const Foot = () => {
                   >
                     {link.icon && (
                       <span className="text-[20px]">
-                        {typeof link.icon === "function" ? <link.icon /> : <img src={link.icon} alt={link.name} className="w-[20px] h-[20px] text-dim-white" />}
+                        {typeof link.icon === "function" ? (
+                          <link.icon />
+                        ) : (
+                          <img
+                            src={link.icon}
+                            alt={link.name}
+                            className="w-[20px] h-[20px] text-dim-white"
+                          />
+                        )}
                       </span>
                     )}
 
                     {/* Conditionally handle download or external link */}
                     {link.file ? (
                       <button
-                        onClick={() => handleDownload(link.file, link.name + ".pdf")}
+                        onClick={() =>
+                          handleDownload(link.file, link.name + ".pdf")
+                        }
                         className="font-poppins text-[16px] leading-[24px] visited:text-purple-600 hover:text-secondary cursor-pointer"
                       >
                         {link.name}
@@ -48,8 +78,14 @@ const Foot = () => {
                     ) : (
                       <a
                         href={link.link}
-                        target={link.link.startsWith("http") ? "_blank" : "_self"}
-                        rel={link.link.startsWith("http") ? "noopener noreferrer" : ""}
+                        target={
+                          link.link.startsWith("http") ? "_blank" : "_self"
+                        }
+                        rel={
+                          link.link.startsWith("http")
+                            ? "noopener noreferrer"
+                            : ""
+                        }
                         className="font-poppins text-[16px] leading-[24px] visited:text-purple-600 hover:text-secondary cursor-pointer"
                       >
                         {link.name}

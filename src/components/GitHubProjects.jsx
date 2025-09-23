@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../style";
 import Projects from "./Projects";
-
+import Typing from "./Typing";
 const GITHUB_USERNAME = "Giinsho"; // Change to your GitHub username
 const GITHUB_API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos`;
 
@@ -43,7 +43,13 @@ const GitHubProjects = () => {
       <div className="absolute z-[0] w-[60%] h-[60%] -right-[50%] rounded-full blue__gradient"></div>
       <div>
         <h4 className={`${styles.heading2} p-20 text-center`}>
-          Projects from GitHub
+          <Typing
+            texts={["Projects from GitHub"]}
+            typingSpeed={120}
+            deletingSpeed={40}
+            pauseBetween={3000}
+            loop={true}
+          />
         </h4>
 
         <div className="flex flex-wrap sm:justify-between justify-center w-full feedback-container relative z-[1]">
