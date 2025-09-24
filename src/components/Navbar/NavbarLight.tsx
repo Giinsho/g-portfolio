@@ -16,6 +16,11 @@ interface NavBarProps {
   className?: string
 }
 
+
+
+
+
+
 export function NavBar({ items, className }: NavBarProps) {
   const [activeTab, setActiveTab] = useState(items[0].id)
   const [isMobile, setIsMobile] = useState(false)
@@ -30,14 +35,47 @@ export function NavBar({ items, className }: NavBarProps) {
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
+
+  // scroll spy
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveTab(entry.target.id)
+          }
+        })
+      },
+      {
+        root: null,
+        rootMargin: "-50% 0px -50% 0px", // trigger when section is roughly in middle of viewport
+        threshold: 0,
+      }
+    )
+
+    items.forEach((item) => {
+      const section = document.getElementById(item.id)
+      if (section) observer.observe(section)
+    })
+
+    return () => {
+      items.forEach((item) => {
+        const section = document.getElementById(item.id)
+        if (section) observer.unobserve(section)
+      })
+    }
+  }, [items])
+
+
+
   return (
     <div
       className={cn(
-        "fixed bottom-0 sm:top-0 left-1/2 -translate-x-1/2 z-50 mb-6 sm:pt-6",
+        "fixed bottom-0 sm:top-0 left-1/2 -translate-x-1/2 z-50 mb-14 sm:pt-6 h-0 ",
         className,
       )}
     >
-      <div className="flex items-center gap-3 bg-background/5 border border-border backdrop-blur-lg py-1 px-1 rounded-full shadow-lg">
+      <div className="flex items-center gap-3 bg-background/5 border border-border backdrop-blur-lg py-1 px-1 rounded-full shadow-lg ">
         {items.map((item) => {
           const Icon = item.icon
           const isActive = activeTab === item.id
@@ -49,7 +87,7 @@ export function NavBar({ items, className }: NavBarProps) {
               onClick={() => setActiveTab(item.id)}
               className={cn(
                 "relative cursor-pointer text-sm font-semibold px-2 sm:px-6 py-2 rounded-full transition-colors ",
-                "text-foreground/80 hover:text-primary text-secondary",
+                "text-foreground/80 hover:text-primary text-secondary ",
                 isActive && "bg-muted text-primary",
               )}
             >

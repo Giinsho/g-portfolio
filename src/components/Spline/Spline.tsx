@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
-import { SplineScene } from "./SplineScene.js"
+import { SplineScene } from "./splite.js"
 
 export function Spline() {
     const [opacity, setOpacity] = useState(1)

@@ -1,8 +1,8 @@
 import React from "react";
-import { logo } from "../assets";
-import { footerLinks, socialMedia } from "../constants";
-import styles from "../style";
-import Typing from "./Typing";
+import { logo } from "../../assets";
+import { footerLinks, socialMedia } from "../../constants";
+import styles from "../../style";
+import Typing from "../TypingAnimation/Typing";
 const Foot = () => {
   const handleDownload = (file, name) => {
     const link = document.createElement("a");

@@ -1,21 +1,29 @@
 import React from "react";
 import { technologies } from "../../constants";
 import styles, { layout } from "../../style";
-import Typing from "../Typing";
+import Typing from "../TypingAnimation/Typing";
 import TechnologiesCard from "./TechnologiesCard";
 
 const Technologies = () => {
   return (
-    <section id="technologies" className={`${layout.section} flex flex-col`}>
-      <div className={`${layout.sectionInfo} mb-8`}>
+    <section
+      id="technologies"
+      className={`${layout.section} flex flex-col text-center`}
+    >
+      <div
+        className={`${layout.sectionInfo} mb-8 flex flex-col justify-center `}
+      >
         <h2 className={styles.heading2}>
-          <Typing
-            texts={["Technologies I used"]}
-            typingSpeed={220}
-            deletingSpeed={40}
-            pauseBetween={5000}
-            loop={true}
-          />
+          <span>
+            <Typing
+              texts={["Technologies I Used"]}
+              typingSpeed={110}
+              deletingSpeed={40}
+              pauseBetween={5000}
+              loop={true}
+              className="break-words"
+            />
+          </span>
         </h2>
       </div>
 

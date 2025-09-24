@@ -8,11 +8,12 @@ const AdditionalEducationCourses = () => {
 
   return (
     <>
-      <h1 className="font-poppins font-semibold ss:text-[22px] text-[32px] text-white ss:leading-[100px] leading-[75px]">
-        <br className="sm:block hidden" />{" "}
-        <span>ADDITIONAL ACTIVE PARTICIPATION RELATED TO EDUCATION</span>
+      <br />
+      <h1 className="font-poppins font-semibold ss:text-[22px] text-[32px] text-white ss:leading-[100px] ">
+        <span>Additional Active Participation Related To Edcucation</span>
       </h1>
-      <div className=" bg-cyan-800/10  p-5 rounded-[20px] w-[100%] sm:w-[50%]">
+      <br />
+      <div className=" bg-cyan-800/10  p-5 rounded-[20px] w-[100%] sm:w-[100%]">
         <ul className="mt-5">
           {courses.map((course, index) => (
             <li

@@ -10,8 +10,13 @@ import {
   Maintenance,
   Experience,
 } from "./components";
+
+import DownloadCV from "./components/Links/DownloadCV";
+import CopyEmailSection from "./components/Links/CopyEmailSection";
+import EducationItem from "./components/Education/EducationItem";
+import Education from "./components/Education/Education";
 import Spline from "./components/Spline/Spline";
-import JobSign from "./components/JobSign";
+import JobSign from "./components/JobAssign/JobSign";
 
 const MaintenanceMode = false;
 
@@ -41,6 +46,17 @@ const App = () => {
       <div className={`bg-primary ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           <AboutMe />
+        </div>
+      </div>
+      <div className={`bg-primary ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <DownloadCV />
+          <CopyEmailSection />
+        </div>
+      </div>
+      <div className={`bg-primary ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth} `}>
+          <Education />
         </div>
       </div>
 

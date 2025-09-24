@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Typing from "./Typing";
-import styles from "../style";
+import Typing from "../TypingAnimation/Typing";
+import styles from "../../style";
 const JobSign = () => {
   // Keyframes for gradient animation
   const gradientKeyframes = `
@@ -31,7 +31,7 @@ const JobSign = () => {
 
   return (
     <section id="jobsearch" className={` ${styles.paddingY}`}>
-      <div className="flex justify-center items-center mt-8">
+      <div className="flex justify-center items-center mt-8 text-center">
         <span
           className="font-bold text-3xl md:text-5xl px-6 py-3 rounded-lg
                    bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500
@@ -42,6 +42,7 @@ const JobSign = () => {
           style={{ backgroundSize: "200% 200%" }}
         >
           Currently looking for job:
+          <br />
           <br />
           <Typing
             texts={[

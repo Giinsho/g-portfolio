@@ -1,29 +1,28 @@
 import Navbar from "./Navbar/Navbar";
 
-import AboutMeInfo from "./AboutMeInfo";
-import Projects from "./Projects";
-import Foot from "./Foot";
+import AboutMeInfo from "./AboutMe/AboutMeInfo";
+import Projects from "./Projects/Projects";
+import Foot from "./Footer/Foot";
 import Stats from "./Stats";
-import GitHubProjects from "./GitHubProjects";
+import GitHubProjects from "./Projects/GitHubProjects";
 
 import Technologies from "./Technologies/Technologies";
 
-import AboutMe from "./AboutMe";
-import ButtonLink from "./ButtonLink";
+import AboutMe from "./AboutMe/AboutMe";
+import ButtonLink from "./Links/ButtonLink";
 import Maintenance from "./Maintenance";
-import Experience from "./Experience";
-
+import Experience from "./Experience/Experience";
 
 export {
-    Navbar,
-    AboutMeInfo,
-    Projects,
-    Foot,
-    Stats,
-    GitHubProjects,
-    Technologies,
-    AboutMe,
-    ButtonLink,
-    Maintenance,
-    Experience,
+  Navbar,
+  AboutMeInfo,
+  Projects,
+  Foot,
+  Stats,
+  GitHubProjects,
+  Technologies,
+  AboutMe,
+  ButtonLink,
+  Maintenance,
+  Experience,
 };

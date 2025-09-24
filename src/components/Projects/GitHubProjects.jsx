@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import styles from "../style";
+import styles, { layout } from "../../style";
 import Projects from "./Projects";
-import Typing from "./Typing";
+import Typing from "../TypingAnimation/Typing";
 const GITHUB_USERNAME = "Giinsho"; // Change to your GitHub username
 const GITHUB_API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos`;
 
@@ -40,25 +40,29 @@ const GitHubProjects = () => {
       id="projects"
       className={`${styles.paddingY} ${styles.flexCenter} flex-col relative text-dim-white`}
     >
-      <div className="absolute z-[0] w-[60%] h-[60%] -right-[50%] rounded-full blue__gradient"></div>
-      <div>
-        <h4 className={`${styles.heading2} p-20 text-center`}>
-          <Typing
-            texts={["Projects from GitHub"]}
-            typingSpeed={120}
-            deletingSpeed={40}
-            pauseBetween={3000}
-            loop={true}
-          />
-        </h4>
+      <div
+        className={`${layout.sectionInfo} mb-8 flex flex-col justify-center items-center text-center`}
+      >
+        <h2 className={styles.heading2}>
+          <span>
+            <Typing
+              texts={["Projects From GitHub"]}
+              typingSpeed={110}
+              deletingSpeed={40}
+              pauseBetween={5000}
+              loop={true}
+              className=" break-words "
+            />
+          </span>
+        </h2>
+      </div>
 
-        <div className="flex flex-wrap sm:justify-between justify-center w-full feedback-container relative z-[1]">
-          {projects.length > 0 ? (
-            projects.map((card) => <Projects key={card.id} {...card} />)
-          ) : (
-            <p className="text-center text-gray-400">Loading projects...</p>
-          )}
-        </div>
+      <div className="flex sm:flex-wrap sm:flex-row flex-col sm:justify-between justify-center content-center w-full feedback-container relative z-[1]">
+        {projects.length > 0 ? (
+          projects.map((card) => <Projects key={card.id} {...card} />)
+        ) : (
+          <p className="text-center text-gray-400">Loading projects...</p>
+        )}
       </div>
     </section>
   );

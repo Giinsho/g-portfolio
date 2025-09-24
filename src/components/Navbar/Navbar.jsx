@@ -6,13 +6,14 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className=" py-6 justify-between items-center navbar ">
+    <nav className="py-6 justify-between items-center navbar relative z-10">
       <div className="flex justify-between w-full items-center ">
         {/* Logo on the left */}
         <img
           src={logo}
           alt="logo"
           className="sm:w-[124px] sm:h-[54px] w-[150px] sm:ml-5 ml-10"
+          style={{ backgroundColor: "transparent", imageRendering: "auto" }}
         />
         {/*New Navbar with spotlight for current section */}
         <NavBar items={navLinks} />
@@ -29,7 +30,7 @@ const Navbar = () => {
         <div
           className={`${
             toggle ? "flex" : "hidden"
-          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar z-50`}
         >
           <ul className="list-none flex justify-end items-center flex-col flex-1">
             {navLinks.map((nav, index) => (
@@ -46,7 +47,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      <ul className="list-none sm:hidden hidden justify-end items-center flex-1">
+      {/*
+            <ul className="list-none sm:hidden hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
@@ -58,6 +60,8 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+      
+      */}
     </nav>
   );
 };

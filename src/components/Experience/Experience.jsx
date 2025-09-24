@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "../style";
-import { check, robot } from "../assets";
-import Typing from "./Typing";
-import { SplineScene } from "./Spline/SplineScene.js";
+import styles from "../../style";
+import { check, robot } from "../../assets";
+import Typing from "../TypingAnimation/Typing";
+
 const belchor = [
   "Implementation of scripts in C#",
   "Working with the Unity game engine",

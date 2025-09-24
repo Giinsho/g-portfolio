@@ -1,5 +1,5 @@
 import React from "react";
-import { iconMap } from "../constants";
+import { iconMap } from "../../constants";
 
 const Projects = ({ content, name, date, link }) => {
   // Find the matching icon based on project name (default to GitHub icon)
