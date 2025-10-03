@@ -24,6 +24,21 @@ interface NavBarProps {
 export function NavBar({ items, className }: NavBarProps) {
   const [activeTab, setActiveTab] = useState(items[0].id)
   const [isMobile, setIsMobile] = useState(false)
+  const [isClickScrolling, setIsClickScrolling] = useState(false)
+
+
+
+  // function to handle nav item clicks
+  const handleNavClick = (id: string) => {
+    setIsClickScrolling(true)
+    setActiveTab(id)
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
+
+    // re-enable spy after a short delay (enough for smooth scroll to settle)
+    setTimeout(() => {
+      setIsClickScrolling(false)
+    }, 3500) // adjust delay depending on scroll speed
+  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -38,18 +53,22 @@ export function NavBar({ items, className }: NavBarProps) {
 
   // scroll spy
   useEffect(() => {
+    if (isClickScrolling) return
     const observer = new IntersectionObserver(
       (entries) => {
+        // prevent ping-pong effect during navbar 
+
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveTab(entry.target.id)
           }
         })
       },
+      //options for observer 
       {
         root: null,
         rootMargin: "-50% 0px -50% 0px", // trigger when section is roughly in middle of viewport
-        threshold: 0,
+        threshold: 1.0,
       }
     )
 
@@ -64,7 +83,7 @@ export function NavBar({ items, className }: NavBarProps) {
         if (section) observer.unobserve(section)
       })
     }
-  }, [items])
+  }, [items, isClickScrolling])
 
 
 
@@ -84,7 +103,10 @@ export function NavBar({ items, className }: NavBarProps) {
             <a
               key={item.id}
               href={`#${item.id}`}
-              onClick={() => setActiveTab(item.id)}
+              onClick={(e) => {
+                e.preventDefault() // prevent instant jump
+                handleNavClick(item.id)
+              }}
               className={cn(
                 "relative cursor-pointer text-sm font-semibold px-2 sm:px-6 py-2 rounded-full transition-colors ",
                 "text-foreground/80 hover:text-primary text-secondary ",
