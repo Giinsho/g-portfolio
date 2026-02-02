@@ -3,8 +3,10 @@ const AdditionalCourses = () => {
   const courses = [
     "Java programming - Mooc.fi",
     "Data analysis with python 2021 - mooc.fi",
-    "CS50's Web Programming with Python and JavaScript",
+    "HarvardX CS50W's Web Programming with Python & JavaScript",
     "Unreal Engine 5 C++ Developer: Learn C++ & Make Video Games",
+    "NVIDIA - Generative AI with Diffusion Models",
+    "Elements of AI - Building AI - 2026",
   ];
 
   return (
